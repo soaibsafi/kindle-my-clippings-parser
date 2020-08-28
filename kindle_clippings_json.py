@@ -48,9 +48,9 @@ while(dates_count):
     date_list.append(Date(dates[dates_count-1], highlight_list))
     dates_count -= 1
     
-json_data = json.dumps(date_list, default=lambda o: o.__dict__, ensure_ascii=False, indent=4)
+json_data = json.dumps(date_list, default=lambda o: o.__dict__)
 
-with open("test/data_file.json", "w", encoding='utf8') as write_file:
+with open("test/data_file.json", "w") as write_file:
     json.dump(json_data, write_file)
 
 
